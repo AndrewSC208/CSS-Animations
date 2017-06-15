@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Animations</title>
+
+	<link rel="stylesheet" href="animations.css">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+	<style>
+		body {
+			height: 2000px;
+		}
+		#object{
+			height: 100px;
+			width: 100px;
+			background-color: #fe5652;
+			position: fixed;
+			z-index: 999;
+			visibility: hidden;
+		}
+	
+	</style>
+
+	<div id="header" class="block">
+		<h2>Just a header</h2>
+		<button>Click Here to slide the box in!</button>
+	</div>
+	<br>
+	<div id="object">Slide in</div>
+	<div class="placeholder">
+		<p>How is this going to work</p>
+	</div>
+
+	<script>
+		$('button').click(function() {
+			$('#object').toggleClass('slideRight');
+		});
+	</script>
+</body>
+</html>
